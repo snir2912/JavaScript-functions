@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stars</title>
+</head>
+
+<body>
+    <input type="text" id="nums">
+    <button id="btn">check</button><br>
+    <p id="text"></p>
+
+
+    <script>
+        let p1 = document.getElementById('text'); //text
+        let r = 5; //max stars in row!
+        let r2 = document.getElementById('nums').value; //the random num
+        r2 = parseInt(r2); //string to number
+
+        let i; //stars
+        let j; //rows
+
+        let btn2 = document.getElementById('btn').addEventListener('click', starz);
+
+        //pyramid function
+        function starz() {
+            for (i = 1; i <= r2; i += 2) {
+                if (r2 % 2 == 0) {
+                    alert('please insert ODD number');
+                    break;
+                }
+                for (j = 1; j <= i; j++) {
+                    document.write("*");
+                }
+                document.write("<br>");
+            }
+        };
+    </script>
+</body>
+
+</html>

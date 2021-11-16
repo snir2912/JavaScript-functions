@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //roll dice function
+        let dice1 = Math.floor(Math.random() * 6) + 1;
+        let dice2 = Math.floor(Math.random() * 6) + 1;
+
+        function rollDice() {
+            console.log(dice1);
+            console.log(dice2);
+        }
+
+        rollDice();
+
+        // hezka function
+        let num1;
+
+        function hezka(num1) {
+            console.log(num1 * num1);
+        }
+
+        hezka(3);
+
+        //sum function
+        let nums = [1, 2, 3, 4];
+        let sum = 0;
+
+        function sum1(arr) {
+            for (let i = 0; i < nums.length; i++) {
+                sum = sum + nums[i];
+                return sum;
+            }
+            console.log(sum);
+        }
+
+        console.log(sum1());
+    </script>
+</body>
+
+</html>

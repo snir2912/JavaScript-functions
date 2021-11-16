@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object list on dom</title>
+</head>
+
+<body>
+    <h1>my object list</h1>
+    <p id="list"></p>
+
+    <script>
+        let students = [{
+            name: 'snir',
+            age: 30
+        }, {
+            name: 'perach',
+            age: 28
+        }, {
+            name: 'shaily',
+            age: 2
+        }];
+
+        let myList = document.getElementById('list');
+        for (let student of students) {
+            myList.innerHTML += `${student.name} age: ${student.age} <br>`;
+            console.log(student);
+        }
+    </script>
+</body>
+
+</html>

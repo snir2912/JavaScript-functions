@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>sorting the array</p>
+    <p id="arrSort"></p>
+    <script>
+        let nums = [2, 5, 1, 3, 7];
+        let p1 = document.getElementById('arrSort');
+        p1.innerHTML = nums;
+
+        //כדי למיין מהקטן לגדול, מגדרים פונקציה עם שני פרמטרים וכל פעם היא משווה בין המפסרים.
+        nums.sort(function(a, b) {
+            return (a - b)
+        });
+        p1.innerHTML = nums;
+    </script>
+</body>
+
+</html>
