@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let user = {
+            name: 'snir',
+            age: 30,
+            address: {
+                state: 'israel',
+                city: 'haifa'
+            }
+        }
+
+        // shallow copy
+        let update = {
+            ...user
+        }
+        update.name = 'perach'
+        update.address.city = 'netanya'
+        console.log(user);
+
+        // deep copy
+        let toUpdate = {
+            ...user,
+            address: {
+                ...user.address
+            },
+        };
+        toUpdate.name = 'shula'
+        toUpdate.address.city = 'even-yehuda'
+        console.log(user);
+    </script>
+</body>
+
+</html>
